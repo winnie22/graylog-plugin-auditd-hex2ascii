@@ -31,7 +31,7 @@ public class AuditdHex2AsciiMetaData implements PluginMetaData {
 
     @Override
     public URI getURL() {
-        return URI.create("https://github.com/TODO");
+        return URI.create("https://github.com/winnie22/graylog-plugin-auditd-hex2ascii");
     }
 
     @Override
