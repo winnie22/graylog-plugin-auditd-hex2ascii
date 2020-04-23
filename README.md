@@ -13,7 +13,7 @@ Restart `graylog-server` and you are done.
 
 Usage
 -----
-Parse auditd logs ie. as describe [here](https://www.graylog.org/post/back-to-basics-working-with-linux-audit-daemon-log-file).
+Parse auditd logs ie. as described [here](https://www.graylog.org/post/back-to-basics-working-with-linux-audit-daemon-log-file).
 Create rule that convert hex-encoded string from cmd or proctitle field into human readable format.
 
 ```
