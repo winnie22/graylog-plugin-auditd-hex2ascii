@@ -17,11 +17,16 @@ Parse auditd logs ie. as described [here](https://www.graylog.org/post/back-to-b
 Create rule that convert hex-encoded string from cmd or proctitle field into human readable format.
 
 ```
-rule "cmd2ascii_auditd"
+rule "proctitle2ascii_auditd"
 when
- has_field("auditd_cmd")
+ has_field("auditd_proctitle")
 then
- set_field("auditd_cmd_ascii", hex2ascii(to_string($message.auditd_cmd)));
+ set_field("auditd_proctitle_ascii", hex2ascii(to_string($message.auditd_proctitle)));
 end
 ```
 
+Will result into fields:
+```
+auditd_proctitle: 636174002F6574632F7373682F737368645F636F6E666967
+auditd_proctitle_ascii: cat /etc/ssh/sshd_config
+```
